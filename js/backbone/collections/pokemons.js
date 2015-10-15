@@ -3,8 +3,11 @@ var app = app || {};
     urlLink = 'http://pokeapi.co/api/v1/pokemon/' + pokemonId.toString();
 
 app.Pokemons = Backbone.Collection.extend({
+
   model: app.Pokemon,
+
   url: urlLink,
+
   sortType: 'natural',
 
   comparator: function(m) {
@@ -28,6 +31,8 @@ app.Pokemons = Backbone.Collection.extend({
       appView.render();
     })
 
-  }
+  }, 
+
+  localStorage: new Backbone.LocalStorage('backbone-pokedex')
 
 });
