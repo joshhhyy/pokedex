@@ -26,13 +26,10 @@ app.Pokemons = Backbone.Collection.extend({
           console.log(self);
         }
       }
-    }).done(function() {
-      var appView = new app.AppView({collection: app.pokedex});
-      appView.render();
     })
 
   }, 
 
-  localStorage: new Backbone.LocalStorage('backbone-pokedex')
+  localStorage: new Backbone.LocalStorage('backbone-pokedex'),
 
 });
