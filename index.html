@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pokedex</title>
+  <script src="css/style.scss"></script>
+  <script src="js/naturalSort.js"></script>
+  <script src="js/jquery.js"></script>
+  <script src="js/underscore.js"></script>
+  <script src="js/backbone.js"></script>
+  <script src="js/backbone.naturalsort.js"></script>
+  <script src="js/backbone/models/pokemon.js"></script>
+  <script src="js/backbone/collections/pokemons.js"></script>
+  <script src="js/backbone/router/appRouter.js"></script>
+  <script src="js/backbone/views/appView.js"></script>
+  <script src="js/backbone/views/pokemonListView.js"></script>
+  <script src="js/backbone/views/pokemonView.js"></script>
+  <script src="js/backbone/pokedex.js"></script>
+</head>
+<body>
+
+  <h1>POKEDEX</h1>
+
+  <div id="main">
+  </div>
+  
+  <script id="appTemplate" type="text/template">
+    <h2>Pokemon Index</h2>
+    <ul id="pokemons"></ul>
+    <li>testing</li>
+  </script>
+  
+  <script id="pokemonListTemplate" type="text/template">
+    <h3>{{name}}</h3>
+    <li>{{types[0]["name"]}}</li>
+  </script>
+
+  <script id="pokemonTemplate" type="text/template">
+    <p>aosjdoasjd</p>
+    <h2>{{name}}</h3>
+    <p>{{type}}</p>
+  </script>
+
+
+</body>
+</html>
