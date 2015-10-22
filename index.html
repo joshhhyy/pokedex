@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Pokedex</title>
-  <script src="css/style.scss"></script>
+  <link rel="stylesheet" href="css/style.scss">
   <script src="js/naturalSort.js"></script>
   <script src="js/jquery.js"></script>
   <script src="js/underscore.js"></script>
@@ -23,6 +23,10 @@
   <h1>POKEDEX</h1>
 
   <div id="main">
+  
+  <div id="left"></div>
+  <div id="right"></div>
+
   </div>
   
   <script id="appTemplate" type="text/template">
@@ -39,7 +43,14 @@
   <script id="pokemonTemplate" type="text/template">
     <p>aosjdoasjd</p>
     <h2>{{name}}</h3>
-    <p>{{type}}</p>
+    <p>{{types[0]['name']}}</p>
+    {[
+      if (types.length === 2) { 
+    ]} 
+      <p>{{types[1]['name']}}</p>
+    {[ 
+      }
+    ]}
   </script>
 
 

@@ -16,7 +16,9 @@ app.PokemonListView = Backbone.View.extend({
   },
 
   showPokemon: function (){
-    app.router.navigate('pokemons/' + this.model.get('id'), true)
+    console.log(this.model.get('national_id'))
+
+    app.router.navigate('pokemons/' + this.model.get('national_id'), true)
 
   }
 });

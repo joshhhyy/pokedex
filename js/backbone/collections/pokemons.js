@@ -10,6 +10,8 @@ app.Pokemons = Backbone.Collection.extend({
 
   sortType: 'natural',
 
+  // localStorage: new Backbone.LocalStorage('backbone-pokedex'),
+
   comparator: function(m) {
     return m.get('national_id')
   },
@@ -17,19 +19,16 @@ app.Pokemons = Backbone.Collection.extend({
   initialize: function() {
     var self = this
     console.log(this.url)
-    this.fetch({
-      success: function() {
-        while (pokemonId < 151) {
-          pokemonId += 1;
-          self.url = 'http://pokeapi.co/api/v1/pokemon/' + pokemonId.toString();
-          self.fetch({remove: false})
-          console.log(self);
+    while (pokemonId < 152) {
+      self.fetch({remove: false}).done(function() {
+        if (app.pokedex.length === 151) {
+          var appView = new app.AppView({collection: app.pokedex});
+          appView.render(); 
         }
-      }
-    })
-
-  }, 
-
-  localStorage: new Backbone.LocalStorage('backbone-pokedex'),
+      })
+      pokemonId += 1;
+      self.url = 'http://pokeapi.co/api/v1/pokemon/' + pokemonId.toString();
+    }  
+  }
 
 });

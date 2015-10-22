@@ -9,6 +9,8 @@ app.AppView = Backbone.View.extend({
     this.collection.each(function (pokemon) {
       var pokemonListView = new app.PokemonListView({model: pokemon});
         pokemonListView.render();
+
+    console.log('view render')
     });
   }
 });

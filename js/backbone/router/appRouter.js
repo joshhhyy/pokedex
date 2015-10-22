@@ -10,10 +10,12 @@ app.appRouter = Backbone.Router.extend ({
   index: function() {
     var appView = new app.AppView({collection: app.pokedex});
     appView.render();
+
   },
 
   viewPokemon: function (id) {
-    var pokemon = app.pokedex.get(id);
+    console.log(id)
+    var pokemon = app.pokedex.at((id - 1));
     var pokemonView = new app.PokemonView({model: pokemon})
     pokemonView.render();
   }
