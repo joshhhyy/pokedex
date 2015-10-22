@@ -1,7 +1,7 @@
 var app = app || {}
 
 app.PokemonView = Backbone.View.extend({
-  el: '#main',
+  el: '#info',
   render: function () {
     console.log('balls')
     var pokemonTemplate = $('#pokemonTemplate').html();
