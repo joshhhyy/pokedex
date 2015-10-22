@@ -9,7 +9,7 @@ Features to add:
 - Add route music (seems tough)
 - Add relevant data (typing, level for evolution etc.)
 - Link to evolutions/prevolutions
-- Column of pokemon
+- Column of pokemon (DONE)
 - Styling
 
 Ideas on visuals: 
