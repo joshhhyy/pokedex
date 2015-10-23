@@ -27,6 +27,10 @@
     </div>  
   </div>
 
+  <div class="middle">
+    
+  </div>
+
   <div class="right">
     <div id="list">
     </div>
@@ -90,7 +94,14 @@
         }
       }
 
-      $('.left').css("background-color", colorChange(types[0]['name']))
+      if (types[1]) {
+        $('.middle').css("background-color", colorChange(types[1]['name']))
+        $('.left').css("background-color", colorChange(types[0]['name']))
+      } else {
+        $('.left, .middle').css("background-color", colorChange(types[0]['name']))  
+      }
+
+      
 
     ]}
 

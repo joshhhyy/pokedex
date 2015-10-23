@@ -8,9 +8,11 @@ body {
 }
 
 .left {
-  width: 70%;
-  margin: 0;
-  padding: 0;
+  width: 35%;
+}
+
+.middle {
+  width: 35%;
 }
 
 .right {
