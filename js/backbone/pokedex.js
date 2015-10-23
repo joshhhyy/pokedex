@@ -7,7 +7,6 @@ _.templateSettings = {
 
 
 app.pokedex = new app.Pokemons
-console.log(app.pokedex)
 
 $(document).ready(function () {
   app.router = new app.appRouter();

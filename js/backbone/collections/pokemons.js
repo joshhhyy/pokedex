@@ -10,15 +10,15 @@ app.Pokemons = Backbone.Collection.extend({
 
   sortType: 'natural',
 
-  // localStorage: new Backbone.LocalStorage('backbone-pokedex'),
+  // localStorage: new Backbone.LocalStorage("backbonepokedex"),
 
   comparator: function(m) {
-    return m.get('national_id')
+    return m.get('national_id');
   },
 
   initialize: function() {
-    var self = this
-    console.log(this.url)
+    var self = this;
+
     while (pokemonId < 152) {
       self.fetch({remove: false}).done(function() {
         if (app.pokedex.length === 151) {

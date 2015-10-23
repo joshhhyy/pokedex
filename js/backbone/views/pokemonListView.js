@@ -15,9 +15,7 @@ app.PokemonListView = Backbone.View.extend({
     $('#pokemons').append(this.$el)
   },
 
-  showPokemon: function (){
-    console.log(this.model.get('national_id'))
-
+  showPokemon: function () {
     app.router.navigate('pokemons/' + this.model.get('national_id'), true)
 
   }
