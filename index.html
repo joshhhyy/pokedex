@@ -46,9 +46,19 @@
     <h2>{{name}}</h3>
     <p class="type">{{types[0]['name']}}</p>
     {[
+      switch (types[0]['name']) {
+        case 'bug':
+          $('.left').css("background-color", "#a6b400")
+          break
+      }
+    ]}
+
+    {[
       if (types[1]) { 
     ]} 
-      <p>{{types[1]['name']}}</p>
+
+    <p>{{types[1]['name']}}</p>
+
     {[ 
       }
     ]}

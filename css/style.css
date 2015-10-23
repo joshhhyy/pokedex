@@ -3,12 +3,14 @@ body {
   flex-direction: row;
   min-height: 100vh;
   overflow: hidden;
-  margin: 0 auto;
+  margin: 0;
+  padding: 0;
 }
 
 .left {
   width: 70%;
-  /*background-color: green;*/
+  margin: 0;
+  padding: 0;
 }
 
 .right {
