@@ -46,11 +46,52 @@
     <h2>{{name}}</h3>
     <p class="type">{{types[0]['name']}}</p>
     {[
-      switch (types[0]['name']) {
-        case 'bug':
-          $('.left').css("background-color", "#a6b400")
-          break
+      var colorChange = function(poketype) {
+
+        switch (poketype) {
+          case 'bug':
+            return "#a6b400"
+          case 'dark':
+            return "#2c2b2c"
+          case 'dragon':
+            return "#6832ff"
+          case 'electric':
+            return "#fefa49"
+          case 'fairy':
+            return "#fe9fc0"
+          case 'fighting':
+            return "#8d0001"
+          case 'fire':
+            return "#fa7c00"
+          case 'flying':
+            return "#9566ff"
+          case 'ghost':
+            return "#8c03ff"
+          case 'grass':
+            return "#32cd32"
+          case 'ground':
+            return "#ddbe01"
+          case 'ice':
+            return "#a2d1ff"
+          case 'mystery':
+            return "#20b2aa"
+          case 'normal':
+            return "#a8a878"
+          case 'poison':
+            return "#9a01af"
+          case 'psychic':
+            return "#fd507b"
+          case 'rock':
+            return "#d09702"
+          case 'steel':
+            return "#c4b2fe"
+          case 'water':
+            return "#2f6aff"
+        }
       }
+
+      $('.left').css("background-color", colorChange(types[0]['name']))
+
     ]}
 
     {[

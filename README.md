@@ -11,6 +11,7 @@ Features to add:
 - Link to evolutions/prevolutions
 - Column of pokemon (DONE)
 - Styling
+- Search function
 
 Ideas on visuals: 
 - Background colours = type colours
