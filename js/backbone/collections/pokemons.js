@@ -17,6 +17,7 @@ app.Pokemons = Backbone.Collection.extend({
   },
 
   initialize: function() {
+    console.log(app.pokedex)
     var self = this;
 
     while (pokemonId < 152) {
@@ -32,3 +33,5 @@ app.Pokemons = Backbone.Collection.extend({
   }
 
 });
+
+app.pokedex = new app.Pokemons();

@@ -6,8 +6,6 @@ _.templateSettings = {
 };
 
 
-app.pokedex = new app.Pokemons
-
 $(document).ready(function () {
   app.router = new app.appRouter();
   Backbone.history.start();
